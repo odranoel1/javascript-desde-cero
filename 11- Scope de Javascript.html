@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    //Tipos de Scope
+    //Global: Podemos acceder a ellas desde cualquier parte del código.
+    //Local: Variables creadas dentro de una funcion, que sólo pueden
+    //ser accedidas desde su propia función o una función anidada.
+
+    var global = "Variable global";
+    //alert (global);
+
+    var funcion1 = function () {
+      //La podemos llamar desde una funcion
+      alert(global);
+      global = "Varible global: Modificada desde una funcion";
+      alert(global);
+      //Variable local
+      var local = "Variable local";
+      alert(local);
+      //Si le quitas la palabra reservada a la variable, se vuelve global.ej:
+      local_es_global = "Variable local (sinvar): Se vuelve global";
+    }
+
+    funcion1();
+    alert(global);
+    alert(local_es_global);
+    funcion2();
+
+    //Funcion autoinvocada = Para que el código que este afuera,
+    //no pueda acceder al código que este adentro(nuestro).
+    (function () {
+      var funcion2 = function () {
+        var variableLocal = "Variable local de una funcion";
+        var funcionlocal = function () {
+          var variableLocal = "Esta es una variable local dentro de una funcion local";
+          alert(variableLocal);
+        }
+      funcionlocal();
+      }
+    }())
+
+
+    </script>
+  </body>
+</html>

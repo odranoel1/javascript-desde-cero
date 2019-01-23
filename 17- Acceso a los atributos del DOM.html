@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      div{
+        background-color: rgb(153, 151, 157);
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .red {
+        background-color: red;
+      }
+      .blue {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="seccion1">
+      <a id="enlace" href="http://google.com">Google</a>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div id="prueba"></div>
+    </section>
+
+    <script type="text/javascript">
+      var elemento = document.createElement("div"),
+          padre = document.getElementsByTagName("div")[0].parentNode,
+          referencia = document.getElementsByTagName("div")[1];
+
+          padre.insertBefore(elemento,referencia);
+          //Actualizar atributos
+          referencia.setAttribute("class","blue");
+          elemento.setAttribute("id","div-dos");
+          elemento.setAttribute("class","una dos");
+          elemento.setAttribute("class", "red");
+
+          //Actulizar enlace sin crear variable, sólo con id
+          enlace.setAttribute("href","http://youtube.com")
+          prueba.setAttribute("class","red");
+    </script>
+  </body>
+</html>

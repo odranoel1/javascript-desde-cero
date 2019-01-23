@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    function saludo(loquesea, numero) {
+      document.write("Puedes poner cualquier nombre para el parametro,ej: " + "<br>" + loquesea + numero + "<br>");
+    }
+
+    saludo("Parametro:loquesea ", 19);
+
+    function suma(numero1,numero2) {
+      var param1 = numero1;
+      var param2 = numero2;
+
+      return param1 + param2;
+    }
+
+    document.write(suma(2,10) + "<br>");
+    document.write(suma(3,1) + "<br>");
+
+    function numeromayor(valor1,valor2) {
+      var numeroa = valor1;
+      var numerob = valor2;
+      if (numeroa > numerob){
+        return numeroa;
+      } else {
+        return numerob;
+      }
+    }
+
+    document.write("El numero mayor es: " + numeromayor(5,2) + "<br>");
+    document.write("El numero mayor es: " + numeromayor(15,22));
+
+    </script>
+
+  </body>
+</html>

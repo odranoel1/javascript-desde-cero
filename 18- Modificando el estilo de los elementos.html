@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    .thumb {
+      width: 200px;
+      transition: 300ms all ease;
+    }
+    .grande {
+      width: 400px;
+    }
+    .titulo {
+      border: 1px solid navy;
+      background-color: #ccc;
+      padding: 10px;
+    }
+    .tituloGrande {
+      font-size: 60px;
+    }
+  </style>
+  <body>
+    <h1 id="encabezado" class="">Soy un encabezado (:</h1>
+    <!-- Agregar clases usando javascript -->
+    <script type="text/javascript">
+    var encabezado = document.getElementById("encabezado");
+    //Acceder a la clase:
+    encabezado.className = "titulo tituloGrande";
+    //Modificar los estilos
+    // encabezado.style.color = "navy";
+    // encabezado.style.background = "red";
+    // Eliminar clase agregada
+    encabezado.className = encabezado.className.replace("tituloGrande","");
+
+    </script>
+  </body>
+</html>

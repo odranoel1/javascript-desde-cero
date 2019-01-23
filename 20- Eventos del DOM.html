@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button id="button" type="button" name="button">Botón</button>
+    <input id="input" type="text" name="" value="">
+    <p>Checar si esta disponible usuario(change)</p>
+    <input id="usuario" type="text" name="" value="">
+
+    <script type="text/javascript">
+      // Para hacer un evento en el boton
+      var boton = document.getElementById("button");
+      boton.addEventListener("click",prueba);
+      boton.addEventListener("click",prueba2);
+
+      function prueba() {
+        alert("Funciona");
+      }
+      function prueba2() {
+        alert("Funciona2");
+      }
+
+      var input = document.getElementById("input");
+      input.addEventListener("focus", prueba3);
+
+      function prueba3() {
+        console.log("Probando");
+      }
+
+      var usuario = document.getElementById("usuario");
+      usuario.addEventListener("change", eventochange);
+
+      function eventochange() {
+        alert("Usuario no disponible");
+      }
+
+      // Remover eventos
+      boton.removeEventListener("click", prueba);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ol id="lista">
+      <li id="primero">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+      <li>Consectetur adipisicing elit, orem ipsum dolor sit amet,</li>
+      <li>adipisicing ipsum  elit, orem  dolor sit amet,</li>
+      <li>orem  dolor elit, adipisicing ipsum sit amet,</li>
+      <li>ipsum orem elit, adipisicing ipsum dolor amet,</li>
+    </ol>
+    <script type="text/javascript">
+      var primerelemento = document.getElementById("primero"),
+          segundoelemento = document.getElementsByTagName("li")[1],
+          tercerelemento = document.getElementsByTagName("li")[2];
+      //Modificando contenido de un elemento.
+      //¿Como acceder a un elemento? - Metodo 1: innerHTML(id)
+      primerelemento.innerHTML = "<p class=\"prueba\">Hackeado perro</p>";
+      //¿Como acceder a un elemento? - Metodo 2: innerHTML(tag)
+      segundoelemento.innerHTML = "Hola de new";
+      //¿Como acceder a un elemento? - Metodo 3: innerHTML(tag)
+      tercerelemento.textContent = "Nuevo texto <i> prueba </i>";
+
+      //Remplazar un elemento.Ej. "li" a "p"
+      var remplazo = document.createElement("p"),
+          contenido = document.createTextNode("Remplazo de li"),
+          padre = document.getElementsByTagName("li")[0].parentNode,
+          elementoaremplazar = document.getElementsByTagName("li")[3];
+
+      remplazo.appendChild(contenido);
+      padre.replaceChild(remplazo, elementoaremplazar);
+
+      //Eliminar un elemento
+      var nodopadre = document.getElementsByTagName("li")[0].parentNode,
+          elementoaeliminar = document.getElementsByTagName("li")[3];
+      nodopadre.removeChild(elementoaeliminar);
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ol id="lista">
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+      <li>Consectetur adipisicing elit, orem ipsum dolor sit amet,</li>
+    </ol>
+    <script type="text/javascript">
+      var elemento = document.createElement("li"),
+          contenido = document.createTextNode("Soy un li"),
+          //Obtener el elemento padre de una lista por id
+          //padre = document.getElementById("lista");
+          //Por el tag
+          padre = document.getElementsByTagName("li")[0].parentNode;
+          //Obtener sólo el elemento hijo
+          hijo = document.getElementsByTagName("li")[0];
+
+      elemento.appendChild(contenido);
+      padre.appendChild(elemento); //Agregar un nodo al final.
+      padre.insertBefore(elemento, hijo); //Agregar antes de un nodo.
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .thumb {
+        width: 200px;
+        transition: 300ms all ease;
+      }
+      .aumentar {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <input type="button" name="" value="Cambiar tamaño" onclick="zoom();">
+      <!-- <a href="#" onclick="zoom();"> Cambiar tamaño </a> -->
+    </form>
+    <img id="img" src="img.jpg"  width="400px" alt="">
+
+    <script type="text/javascript">
+    var tamaño = document.getElementById("img");
+    tamaño.className = "thumb";
+
+    var zoom  = function zoom() {
+      var img = document.getElementById("img");
+      if (img.className == "thumb") {
+        img.setAttribute("class","thumb aumentar");
+      } else {
+        img.setAttribute("class","thumb");
+      }
+      //img.setAttribute("class","thumb aumentar");
+      //Al añadir una clase img.className = "aumentar";
+      //Accediendo a los estilos img.style.width = "400px";
+    }
+
+    </script>
+
+  </body>
+</html>

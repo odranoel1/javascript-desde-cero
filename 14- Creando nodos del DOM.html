@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 id="titulo">Titulo del sitio web</h1>
+    <div id="subtitulo"></div>
+    <p>1.- Lorem ipsum <b>dolor</b> sit amet, consectetur adipiscing elit.</p>
+    <p id="segundo"> 2.- Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>3.- Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <script type="text/javascript">
+      //1. Crear el elemento (Etiqueta)
+      var elemento = document.createElement("p");
+      //2. Crear un nodo de texto (Contenido de etiqueta)
+      var contenido = document.createTextNode("Bienvenido");
+      //3. Añadir el nodo de texto al elemento
+      elemento.appendChild(contenido);
+      //4. Agregar atributos al elemento
+      elemento.setAttribute("align","center");
+      //5. Agregar el elemento al documento
+      document.getElementById("subtitulo").appendChild(elemento);
+    </script>
+  </body>
+</html>

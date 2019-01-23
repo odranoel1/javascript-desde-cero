@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="10- Funciones y formularios.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="Calculadora">
+      <h2>Calculadora</h2>
+      <p class="subtitle">Ingrese los números deseados</p>
+      <form action="" >
+        <p> Numero1</p> <input type="text" id="numero1">
+        <p> Numero2 </p> <input type="text" id="numero2"> <br> <br>
+        <input type="button" value="Sumar" onclick="alert( suma() );">
+        <input type="button" value="Multiplicar" onclick="alert( multi() );"> <br> <br>
+        <input type="button" value="Restar" onclick="alert( restar() );">
+        <input type="button" value="Dividir" onclick="alert( dividir() );"> <br><br>
+        <input type="button" value="¿Cual numero es mayor?" onclick="alert( numeromayor() )">
+      </form>
+    </div>
+
+    <script type="text/javascript">
+      var suma = function() {
+        var valor1 = parseFloat(document.getElementById("numero1").value);
+        var valor2 = parseFloat(document.getElementById("numero2").value);
+
+        var resultados = valor1 + valor2;
+        return resultados;
+      }
+
+      var multi = function() {
+        var multi1 = parseFloat(document.getElementById("numero1").value);
+        var multi2 = parseFloat(document.getElementById("numero2").value);
+
+        var resultadom = multi1 * multi2;
+        return  resultadom;
+      }
+
+      var restar = function() {
+        var res1 = parseFloat(document.getElementById("numero1").value);
+        var res2 = parseFloat(document.getElementById("numero2").value);
+
+        var resultador = res1-res2;
+        return resultador;
+      }
+
+      var dividir = function () {
+        var div1 = parseFloat(document.getElementById("numero1").value);
+        var div2 = parseFloat(document.getElementById("numero2").value);
+
+        var resultadod = div1/div2;
+        return resultadod;
+      }
+
+      var numeromayor = function () {
+        var numeroa = parseFloat(document.getElementById("numero1").value);
+        var numerob = parseFloat(document.getElementById("numero2").value);
+        if (numeroa > numerob) {
+          return  numeroa;
+        } else {
+          return numerob;
+        }
+      }
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var nombre = "Juan", edad = 18;
+
+      //1er ejemplo
+      if (nombre == "Carlos") {
+        document.write("Bienvenido " + nombre);
+      } else {
+        document.write("No eres Bienvenido " + nombre);
+      }
+
+      //2do ejemplo
+      if (nombre == "Carlos") {
+        document.write("Bienvenido " + nombre);
+      } //Sino hacer otra comprobacion
+      else if (nombre == "Leo") {
+        document.write("Bienvenido " + nombre);
+      } else {
+        document.write("El nombre " + nombre + " no esta registrado");
+      }
+
+      //3er ejemplo (Usando la edad)
+      if (edad >= 18) {
+        document.write("Si tienes " + edad + " años para entrar");
+      } else if (nombre == "Juan") {
+        document.write("Tu sí puedes entrar" + nombre);
+      } else {
+        document.write("No cumples con ninguna de las condiciones");
+      }
+
+      //3er ejemplo
+      if (edad == 18 && nombre == "Juan") {
+        document.write("Bienvenido al gremio " + nombre + " de " + edad);
+      }else {
+        document.write("Porfavor salte");
+      }
+
+      //4to ejemplo
+      if (edad >= 18 || nombre == "Juan") {
+        document.write("Lograste entrar por tu edad de: " + edad + " o tu nombre: " + nombre);
+      } else {
+        document.write("Ni así lograste entrar");
+      }
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var amigos = ["Leo", "Pedro", "Juan", "Roberto"];
+      //Propiedad Length: Cuantos elementos hay en un arreglo
+      document.write ("Tienes " + amigos.length + " Amigos ");
+
+      //Agregar elementos al final del arreglo
+      //Length = Como da la cantidad de elementos, va leyendo
+      //las posiciones del arreglo, lo cual nos permite agregar siempre uno al final
+      amigos[amigos.length] = "Santiago ";
+      document.write(amigos.length);
+
+      //Agregar elementos con push
+      amigos.push("Push1 ", "Push2 ");
+      document.write(amigos.length);
+      //Eliminar el ultimo elementos
+      amigos.pop();
+      document.write(amigos[6]);
+
+      //Concatenar dos arreglos
+      var amigos2 = ["Casa", "Edificio"];
+      var amigos3 = amigos.concat(amigos2);
+      document.write(amigos3);
+
+      //Añadir un elemento entre nuestros valores - Forma 1
+      document.write(amigos.join("|"));
+
+      //Añadir un elemento entre nuestros valores - Forma 2
+      var elementoenmedio = amigos.join(" : ");
+      document.write(elementoenmedio);
+
+      //Order de manera alfabetica o  a la inversa "reverse"
+      var alfabetica = amigos.sort();
+      document.write(alfabetica);
+       </script>
+  </body>
+</html>
